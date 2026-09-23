@@ -1,0 +1,344 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+/* Top Bar */
+
+.topbar {
+    background: #2563eb;
+    color: white;
+    padding: 16px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.logout-btn {
+    background: white;
+    color: #2563eb;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.logout-btn:hover {
+    background: #dbeafe;
+}
+
+/* Main Container */
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+/* Welcome */
+
+.welcome-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome-card h1 {
+    color: #1d4ed8;
+    margin-bottom: 8px;
+}
+
+.welcome-card p {
+    color: #64748b;
+}
+
+/* Cards */
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card h2,
+.posts-section h2 {
+    margin-bottom: 18px;
+    color: #1e40af;
+}
+
+/* Textarea */
+
+textarea {
+    width: 100%;
+    min-height: 100px;
+    resize: vertical;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 15px;
+    margin-bottom: 12px;
+    outline: none;
+}
+
+textarea:focus,
+input:focus {
+    border-color: #2563eb;
+}
+
+/* Buttons */
+
+.primary-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.primary-btn:hover {
+    background: #1d4ed8;
+}
+
+/* Messages */
+
+.message {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Posts */
+
+.posts-section {
+    margin-bottom: 20px;
+}
+
+.post-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.username {
+    font-weight: bold;
+    color: #2563eb;
+}
+
+.post-date {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.post-content {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    white-space: pre-wrap;
+}
+
+.post-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.like-btn {
+    border: none;
+    background: #eff6ff;
+    color: #2563eb;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.like-btn:hover {
+    background: #dbeafe;
+}
+
+.delete-btn {
+    border: none;
+    background: #fee2e2;
+    color: #dc2626;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.comment-box {
+    display: flex;
+    gap: 8px;
+}
+
+.comment-box input {
+    flex: 1;
+    padding: 9px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    outline: none;
+}
+
+.comment-btn {
+    border: none;
+    background: #0f766e;
+    color: white;
+    padding: 9px 13px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.comments {
+    margin-top: 15px;
+    padding-top: 12px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.comment {
+    background: #f8fafc;
+    padding: 10px;
+    border-radius: 7px;
+    margin-bottom: 8px;
+}
+
+.comment strong {
+    color: #2563eb;
+}
+
+/* Users */
+
+.user-card {
+    border: 1px solid #e2e8f0;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-info h3 {
+    color: #1e40af;
+    margin-bottom: 5px;
+}
+
+.user-info p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.follow-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.follow-btn.following {
+    background: #64748b;
+}
+
+/* Profile */
+
+input {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #64748b;
+}
+
+/* Responsive */
+
+@media (max-width: 700px) {
+    .topbar {
+        padding: 15px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    .container {
+        width: 94%;
+    }
+
+    .welcome-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .post-header {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .user-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .comment-box {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - ConnectHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="logo">ConnectHub</div>
+</header>
+
+<main class="container">
+
+    <section class="card auth-card">
+        <h1>Create Account 🚀</h1>
+        <p>Join ConnectHub and start connecting.</p>
+
+        <form id="registerForm">
+
+            <input
+                type="text"
+                id="username"
+                placeholder="Choose a username"
+                minlength="3"
+                required
+            >
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Create a password"
+                minlength="4"
+                required
+            >
+
+            <button type="submit" class="primary-btn">
+                Register
+            </button>
+
+        </form>
+
+        <p id="registerMessage" class="message"></p>
+
+        <p>
+            Already have an account?
+            <a href="login.html">Login here</a>
+        </p>
+    </section>
+
+</main>
+
+<script>
+document.getElementById("registerForm").addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    const username = document.getElementById("username").value.trim();
+    const password = document.getElementById("password").value;
+
+    const message = document.getElementById("registerMessage");
+
+    try {
+        const response = await fetch("/api/register", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                username,
+                password
+            })
+        });
+
+        const data = await response.json();
+
+        message.textContent = data.message;
+
+        if (response.ok) {
+            setTimeout(() => {
+                window.location.href = "login.html";
+            }, 1000);
+        }
+
+    } catch (error) {
+        message.textContent = "Unable to connect to the server.";
+    }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConnectHub - Social Media</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="logo">ConnectHub</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#people">People</a>
+        <button id="logoutBtn" class="logout-btn" onclick="logout()">Logout</button>
+    </nav>
+</header>
+
+<main class="container">
+
+    <!-- Welcome -->
+    <section id="home" class="welcome-card">
+        <div>
+            <h1>Welcome to ConnectHub 👋</h1>
+            <p>Share your thoughts, connect with people and build your community.</p>
+        </div>
+
+        <div id="userInfo"></div>
+    </section>
+
+    <!-- Create Post -->
+    <section class="card">
+        <h2>Create a Post 📝</h2>
+
+        <textarea
+            id="postContent"
+            placeholder="What's on your mind?"
+            maxlength="500"
+        ></textarea>
+
+        <button onclick="createPost()" class="primary-btn">
+            Post
+        </button>
+
+        <p id="postMessage" class="message"></p>
+    </section>
+
+    <!-- Posts -->
+    <section class="posts-section">
+        <h2>Latest Posts</h2>
+        <div id="postsContainer"></div>
+    </section>
+
+    <!-- People -->
+    <section id="people" class="card">
+        <h2>Discover People 👥</h2>
+        <div id="usersContainer"></div>
+    </section>
+
+    <!-- Profile -->
+    <section class="card">
+        <h2>My Profile 👤</h2>
+
+        <input
+            type="text"
+            id="profileUsername"
+            readonly
+        >
+
+        <textarea
+            id="profileBio"
+            placeholder="Write something about yourself..."
+            maxlength="200"
+        ></textarea>
+
+        <button onclick="updateProfile()" class="primary-btn">
+            Update Profile
+        </button>
+
+        <p id="profileMessage" class="message"></p>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 ConnectHub | CodeAlpha Task 2</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
